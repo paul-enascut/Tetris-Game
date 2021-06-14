@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Game Of Life</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="tetris-container">
+           <!-- Here will be injected the Tetris Game -->
+        </div>
+    </body>
+
+    <script src="Models/cell.js"></script>   
+    <script src="Models/constants.js"></script>   
+    <script src="Models/grid.js"></script>   
+
+    <script src="Helpers/timer.js"></script>
+    <script src="Helpers/eventTarget.js"></script>
+    <script src="Helpers/utils.js"></script>
+    <script src="Helpers/keyListener.js"></script>
+
+    <script src="tetris.js"></script>
+    <script>
+        "use strict";
+        var tetrisGame = new PES.Tetris({
+            containerSelector: '.tetris-container',
+            speed: 0.5, // timeout i seconds
+            rows: 12,
+            columns: 10,
+            cellWidth: 30 // in px
+        });
+    </script>
+</html>
